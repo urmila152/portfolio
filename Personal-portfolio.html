@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Urmila Pol | Systems that detect, predict and monitor</title>
+<meta name="description" content="Urmila Pol, third-year IT student building ML, agentic AI and IoT projects. Press Run detection to see my portfolio the way my models see the world.">
+<meta name="theme-color" content="#4c1d95">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Urmila Pol | Systems that detect, predict and monitor">
+<meta property="og:description" content="ML, agentic AI and IoT projects, from dataset to deployed demo. Press Run detection to explore.">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%234c1d95'/%3E%3Cpath d='M9 12V9h3M20 9h3v3M23 20v3h-3M12 23H9v-3' fill='none' stroke='%23fff' stroke-width='2.4'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;800&family=JetBrains+Mono:wght@600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<script>document.documentElement.className+=" js"</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Urmila Pol","jobTitle":"Information Technology student","email":"polurmila422@gmail.com","alumniOf":{"@type":"CollegeOrUniversity","name":"Sanjivani College of Engineering"},"knowsAbout":["Machine learning","Computer vision","Agentic AI","IoT","Python","Java"],"sameAs":["https://github.com/urmila152","https://www.linkedin.com/in/urmila-pol-6a2426280"]}</script>
+<style>
+:root{--bg:#f6f5fb;--ink:#1b1633;--muted:#554d70;--card:#fff;--line:#d8d3ea;--edge:#6f6890;--brand:#4c1d95;--navh:72px;--logh:160px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--navh) + 12px)}
+body{margin:0;background:var(--bg) radial-gradient(circle,#d3cde6 1px,transparent 1.3px) 0 0/26px 26px;color:var(--ink);font:18px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--brand)}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+html:not(.js) .js-only{display:none!important}
+
+/* navigation */
+nav{position:sticky;top:0;z-index:5;background:#f6f5fbf2;backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;gap:.4rem 1.1rem;align-items:center;flex-wrap:wrap;padding:.5rem 1.25rem}
+nav strong{font:800 1.15rem "Bricolage Grotesque",sans-serif;margin-right:auto}
+nav a{color:var(--ink);text-decoration:none;font-weight:600;display:inline-flex;align-items:center;min-height:44px;padding:0 .2rem}
+nav a:hover{color:var(--brand)}
+nav a[aria-current=true]{color:var(--brand);box-shadow:inset 0 -3px 0 var(--brand)}
+nav .go{padding:.5rem .9rem;font-size:.85rem}
+@media(max-width:640px){nav a{flex:1 1 auto;justify-content:center}nav strong{margin-right:0}nav .scanBtn{order:2}nav strong{order:1;flex:1}nav a{order:3}}
+.skip{position:absolute;left:-999px;top:0;background:var(--ink);color:#fff;padding:.6rem 1rem;min-height:44px;z-index:20;border-radius:0 0 8px 0}.skip:focus{left:0}
+
+/* layout */
+main{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+section{padding:4rem 0 .5rem}
+h2{font-size:clamp(1.8rem,4vw,2.4rem);margin-bottom:1.6rem}
+h3{font-size:1.2rem}
+.sub{margin:3rem 0 1.5rem}
+
+/* hero */
+.hero{padding-top:2.6rem}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6.2vw,4.3rem);font-weight:800;letter-spacing:-.02em;max-width:13em}
+.lead{font-size:1.25rem;color:var(--muted);max-width:36rem;margin:1.4rem 0 0}
+.vf{--g:linear-gradient(var(--brand),var(--brand));position:relative;padding:1.2rem 1.1rem;margin:0 -1.1rem;background:var(--g) top left/28px 3px no-repeat,var(--g) top left/3px 28px no-repeat,var(--g) top right/28px 3px no-repeat,var(--g) top right/3px 28px no-repeat,var(--g) bottom left/28px 3px no-repeat,var(--g) bottom left/3px 28px no-repeat,var(--g) bottom right/28px 3px no-repeat,var(--g) bottom right/3px 28px no-repeat}
+body.scan .vf{background:none}
+.frame{width:100%;height:auto;border-radius:14px;box-shadow:0 18px 40px #1b163330}
+.sweep{animation:sweep 2.6s ease-in-out .5s 1 both}
+@keyframes sweep{0%{transform:translateY(0);opacity:0}10%,90%{opacity:1}100%{transform:translateY(296px);opacity:0}}
+@media(max-width:820px){.hero-grid{grid-template-columns:1fr}.frame{display:none}}
+
+/* detection console: the one place the page asks for a click */
+.console{margin-top:1.6rem;background:var(--card);border:2px solid var(--brand);border-radius:12px;padding:1.2rem 1.3rem;max-width:37rem;display:grid;gap:1rem}
+.console h2{font-size:1.3rem;margin:0}
+.console p{margin:0}
+.c-note{color:var(--muted);font-size:.95rem}
+.go{font:600 1.05rem "JetBrains Mono",monospace;background:var(--brand);color:#fff;border:0;border-radius:8px;padding:.85rem 1.5rem;min-height:48px;cursor:pointer;justify-self:start}
+.go:hover{background:#3b1578}
+.go[aria-pressed=true]{background:var(--ink)}
+.go.pulse{box-shadow:0 0 0 4px #4c1d9530;animation:pulse 1.6s ease-in-out 3}
+@keyframes pulse{50%{box-shadow:0 0 0 9px #4c1d9540}}
+.seg{display:flex;flex-wrap:wrap;gap:.4rem .8rem;align-items:center}
+.seg-l{font-weight:600}
+.track{display:inline-flex;flex-wrap:wrap;gap:2px;border:1px solid var(--edge);border-radius:999px;padding:3px;background:var(--bg)}
+.role{font:600 .95rem "Source Sans 3",sans-serif;min-height:44px;min-width:44px;padding:.4rem 1rem;border:0;border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}
+.role:hover:not([aria-pressed=true]){background:#e6e1f4}
+.role[aria-pressed=true]{background:var(--ink);color:#fff}
+@media(max-width:480px){.track{display:grid;grid-template-columns:1fr 1fr;border-radius:22px;width:100%}}
+.hint{margin:1rem 0 0;max-width:38rem;background:var(--card);border-left:6px solid var(--brand);border-radius:6px;padding:.7rem 1rem}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2rem 3rem;align-items:start}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr}}
+.about{display:grid;gap:1.2rem;max-width:40rem}.about p{margin:0}
+.timeline{list-style:none;margin:0;padding:0 0 0 1.2rem;border-left:3px solid var(--brand);display:grid;gap:1rem}
+.timeline li{position:relative}
+.timeline li::before{content:"";position:absolute;left:calc(-1.2rem - 7px);top:.55em;width:11px;height:11px;border-radius:50%;background:var(--brand);border:2px solid var(--bg)}
+.timeline b{display:block}
+.timeline span{color:var(--muted)}
+
+/* skills */
+#skillList{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.6rem 2.4rem}
+.group h3{margin-bottom:.8rem}
+.pills{display:flex;flex-wrap:wrap;gap:1.4rem .6rem}
+.pill{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.35rem .9rem;font-weight:600}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2.2rem 1.2rem}
+.box{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:1.1rem 1.25rem}
+.box p{margin:.5rem 0 0;color:var(--muted)}
+.box .meta{font-weight:600;color:var(--ink)}
+.box[data-k=project],.box[data-k=win]{border-top:4px solid var(--c)}
+.box.feature{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:.4rem 2rem;align-items:start}
+@media(max-width:720px){.box.feature{grid-template-columns:1fr}}
+.tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.7rem}
+.tag{font:600 .75rem "JetBrains Mono",monospace;background:#ede9fe;color:#4c1d95;padding:.15rem .55rem;border-radius:4px}
+.sr{position:absolute;left:-999px;width:1px;height:1px;overflow:hidden}
+.box a.link{display:inline-flex;align-items:center;min-height:44px;font-weight:600}
+
+/* contact */
+.cbtns{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin-top:1rem}
+.cbtn{font:600 .95rem "Source Sans 3",sans-serif;display:inline-flex;align-items:center;min-height:44px;padding:.4rem 1.1rem;border-radius:999px;border:1px solid var(--brand);background:var(--card);color:var(--brand);text-decoration:none;cursor:pointer}
+.cbtn:hover{background:var(--brand);color:#fff}
+.cbtn.primary{background:var(--brand);color:#fff}.cbtn.primary:hover{background:#3b1578}
+footer{max-width:1040px;margin:3rem auto 0;padding:1.5rem 1.25rem 3rem;border-top:1px solid var(--line);color:var(--muted)}
+footer p{margin:0}
+
+/* detection mode */
+[data-k=me]{--c:#6d28d9}[data-k=skill]{--c:#1d4ed8}[data-k=project]{--c:#c2410c}[data-k=win]{--c:#047857}
+body.scan [data-det]{outline:2px solid var(--c);outline-offset:3px;position:relative;cursor:pointer;border-radius:4px;scroll-margin-top:calc(var(--navh) + 32px);scroll-margin-bottom:calc(var(--logh) + 24px)}
+body.scan [data-det]::after{content:attr(data-det);position:absolute;left:-2px;bottom:calc(100% + 5px);background:var(--c);color:#fff;font:600 .72rem "JetBrains Mono",monospace;padding:.05rem .4rem;white-space:nowrap;z-index:2;pointer-events:none}
+body.scan .pill::before{content:"";position:absolute;inset:-5px 0}
+body.scan [data-det].sel{outline-width:5px;background:color-mix(in srgb,var(--c) 14%,transparent)}
+body.scan.filtered [data-det]:not(.dim){background:color-mix(in srgb,var(--c) 8%,transparent)}
+body.scan [data-det].dim{outline:1px dashed var(--edge);outline-offset:2px}
+body.scan [data-det].dim::after{display:none}
+body.scan.unlocked #heroTitle{--c:#047857}
+body.scan.unlocked #heroTitle::after{content:"learner who ships 1.00"}
+#log{position:fixed;left:0;right:0;bottom:0;z-index:9;background:var(--ink);color:#fff;padding:.8rem 1.25rem calc(.8rem + env(safe-area-inset-bottom,0px));display:grid;gap:.6rem;max-height:42vh;overflow:auto}
+#log[hidden]{display:none}
+#log :focus-visible{outline-color:#fff}
+.l-top{display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:space-between}
+#msg{flex:1 1 18rem;font-size:1rem}
+.l-actions{display:flex;gap:.5rem}
+.lbtn{font:600 .95rem "Source Sans 3",sans-serif;min-height:44px;min-width:44px;padding:.4rem 1rem;border-radius:8px;border:2px solid #fff;background:#fff;color:var(--ink);cursor:pointer}
+.lbtn.ghost{background:transparent;color:#fff}
+.lbtn:hover{background:#e6e1f4;color:var(--ink)}
+#prog{font-size:.9rem;color:#d8d3ea}
+#prog.rare{background:#fff;color:var(--ink);border-left:6px solid #047857;border-radius:6px;padding:.6rem .8rem;font-size:.95rem}
+.pips{display:inline-flex;gap:5px;vertical-align:middle;margin-left:.6rem}
+.pips i{width:12px;height:12px;border-radius:50%;border:2px solid #fff}
+.pips i.on{background:#7ee0b5;border-color:#7ee0b5}
+.legend{display:flex;flex-wrap:wrap;gap:.4rem;list-style:none;margin:0;padding:0}
+.legend li{background:var(--c);color:#fff;font:600 .72rem "JetBrains Mono",monospace;padding:.1rem .5rem;border-radius:3px}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.sweep{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav id="nav" aria-label="Main">
+  <strong>Urmila Pol</strong>
+  <a href="#about">About me</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+  <button class="go scanBtn js-only" type="button" aria-pressed="false">Run detection</button>
+</nav>
+<main id="main">
+<section class="hero">
+  <div class="hero-grid">
+    <div>
+      <div class="vf"><h1 id="heroTitle" data-k="me" data-det="person 0.99" data-fact="Hi, that’s me. Third-year IT student sharing a very detectable enthusiasm for shipping projects.">I build systems that detect, predict and monitor.</h1></div>
+      <p class="lead">Third-year IT student working on computer vision, ML pipelines, agentic AI and IoT prototypes, from dataset to deployed demo.</p>
+      <noscript><p class="hint">Detection mode needs JavaScript. Everything else on this page works without it.</p></noscript>
+      <div class="console js-only">
+        <h2>Run detection on this page</h2>
+        <p>Every skill, project and achievement gets a bounding box and a confidence score. Tap a box to read the story behind it. Inspect 8 to unlock a rare class that only shows up in me.</p>
+        <button class="go scanBtn pulse" id="heroScan" type="button" aria-pressed="false">Run detection</button>
+        <div class="seg" role="group" aria-labelledby="segL">
+          <span class="seg-l" id="segL">Detect as</span>
+          <div class="track"><button type="button" class="role" data-role="all" aria-pressed="true">Everything</button><button type="button" class="role" data-role="sw" aria-pressed="false">Software</button><button type="button" class="role" data-role="ds" aria-pressed="false">Data</button><button type="button" class="role" data-role="iot" aria-pressed="false">IoT</button></div>
+        </div>
+        <p class="c-note">Picking a role also starts detection and highlights what a software, data or IoT team would find in me.</p>
+      </div>
+    </div>
+    <svg class="frame" viewBox="0 0 360 300" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <rect width="360" height="300" rx="14" fill="#1b1633"/>
+      <g fill="#3b3466"><circle cx="110" cy="96" r="30"/><path d="M50 218c0-42 26-70 60-70s60 28 60 70z"/></g>
+      <rect x="40" y="46" width="140" height="176" fill="none" stroke="#a78bfa" stroke-width="3"/>
+      <rect x="40" y="26" width="104" height="20" fill="#a78bfa"/><text x="47" y="40" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600" fill="#1b1633">person 0.99</text>
+      <rect x="204" y="66" width="120" height="44" fill="none" stroke="#60a5fa" stroke-width="3"/>
+      <rect x="204" y="46" width="92" height="20" fill="#60a5fa"/><text x="211" y="60" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600" fill="#1b1633">skill 0.90</text>
+      <rect x="204" y="150" width="120" height="78" fill="none" stroke="#fb923c" stroke-width="3"/>
+      <rect x="204" y="130" width="116" height="20" fill="#fb923c"/><text x="211" y="144" font-family="JetBrains Mono,monospace" font-size="12" font-weight="600" fill="#1b1633">project 0.93</text>
+      <g fill="#3b3466"><rect x="216" y="164" width="96" height="8" rx="2"/><rect x="216" y="180" width="72" height="8" rx="2"/><rect x="216" y="196" width="84" height="8" rx="2"/></g>
+      <rect class="sweep" x="0" y="0" width="360" height="3" fill="#7ee0b5"/>
+    </svg>
+  </div>
+</section>
+
+<section id="about">
+  <h2>About me</h2>
+  <div class="about-grid">
+    <div class="about">
+      <p data-k="me" data-det="person 0.97" data-fact="My Python journey began in a 4-week internship during my diploma in 2023.">I’m Urmila, a third-year B.Tech Information Technology student at Sanjivani College of Engineering, Kopargaon (CGPA 8.34). I started with Python in 2023, and since then I’ve built ML pipelines, multi-agent AI apps, full-stack dashboards and Arduino prototypes.</p>
+      <p>I enter hackathons because a deadline is the fastest way to learn how to ship. This site is my first project hosted on AWS.</p>
+    </div>
+    <ol class="timeline" aria-label="My path so far">
+      <li><b>2023</b><span>Learned Python in a 4-week internship during my Computer Engineering diploma.</span></li>
+      <li><b>2025</b><span>Started my B.Tech in Information Technology.</span></li>
+      <li><b>2025–26</b><span>Reached Round 2 of GridLock Hackathon 2.0 by Flipkart with team GridHackers.</span></li>
+      <li><b>2026</b><span>Codefest’26 Certificate of Excellence, ServiceNow virtual internship and the SolarSense AI course project.</span></li>
+      <li><b>Aug–Oct 2026</b><span>Data analytics internship, a 19-hour machine learning course and an IoT certification.</span></li>
+      <li><b>Now</b><span>Putting it all online here, on AWS.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills and tech superpowers</h2>
+  <div id="skillList"><div class="group"><h3>Languages</h3><div class="pills"><span class="pill" data-k="skill" data-det="skill 0.78" data-fact="My foundation: object-oriented programming, data structures and algorithms." data-r="sw">Java</span><span class="pill" data-k="skill" data-det="skill 0.83" data-fact="Started in a 4-week internship in 2023. Now my main tool for ML and agents." data-r="sw ds">Python</span><span class="pill" data-k="skill" data-det="skill 0.88" data-fact="Behind FinTrack and my database coursework." data-r="sw ds">SQL</span><span class="pill" data-k="skill" data-det="skill 0.93" data-fact="Used for my BMI Tracker Android app." data-r="sw">Kotlin</span></div></div><div class="group"><h3>AI and machine learning</h3><div class="pills"><span class="pill" data-k="skill" data-det="skill 0.85" data-fact="Trained on a 5-class Indian helmet dataset for GridLock Phase 2." data-r="ds">YOLOv8</span><span class="pill" data-k="skill" data-det="skill 0.90" data-fact="Predicted traffic demand in GridLock and scored about 91 on the leaderboard." data-r="ds">LightGBM</span><span class="pill" data-k="skill" data-det="skill 0.95" data-fact="The license plate reader fallback in my violation detector." data-r="ds">EasyOCR</span><span class="pill" data-k="skill" data-det="skill 0.80" data-fact="Chained four agents in my Study Buddy pipeline." data-r="sw ds">Google ADK</span><span class="pill" data-k="skill" data-det="skill 0.85" data-fact="My data-wrangling tools, including in my Edunet data analytics internship." data-r="ds">Pandas and NumPy</span><span class="pill" data-k="skill" data-det="skill 0.90" data-fact="Used for ML models and evaluation." data-r="ds">Scikit-learn</span></div></div><div class="group"><h3>Web and data</h3><div class="pills"><span class="pill" data-k="skill" data-det="skill 0.92" data-fact="Real-time dashboards for GridLock." data-r="ds">Streamlit</span><span class="pill" data-k="skill" data-det="skill 0.97" data-fact="The backend runtime of SolarSense AI, the team project I built the database for." data-r="sw">Node.js</span><span class="pill" data-k="skill" data-det="skill 0.82" data-fact="I designed the MongoDB data layer for SolarSense AI." data-r="sw">MongoDB</span><span class="pill" data-k="skill" data-det="skill 0.87" data-fact="The relational side of my database projects." data-r="sw ds">MySQL and PostgreSQL</span><span class="pill" data-k="skill" data-det="skill 0.92" data-fact="Realtime Database stores history in BMI Tracker." data-r="sw">Firebase</span></div></div><div class="group"><h3>Tools and hardware</h3><div class="pills"><span class="pill" data-k="skill" data-det="skill 0.79" data-fact="Every project lives in a repo." data-r="sw">Git and GitHub</span><span class="pill" data-k="skill" data-det="skill 0.84" data-fact="Moved GridLock training from CPU to a T4 GPU." data-r="ds">Google Colab</span><span class="pill" data-k="skill" data-det="skill 0.89" data-fact="Runs my street lighting prototype." data-r="iot">Arduino UNO</span><span class="pill" data-k="skill" data-det="skill 0.94" data-fact="Hosts this very site." data-r="sw">AWS Amplify</span></div></div></div>
+</section>
+
+<section id="projects">
+  <h2>Projects and achievements</h2>
+  <div class="grid" id="projList">
+    <article class="box feature" data-k="project" data-det="project 0.91" data-fact="Training got too slow on CPU, so I migrated the pipeline to a Colab T4 GPU." data-r="sw ds"><div><h3>GridLock Hackathon 2.0, Flipkart</h3><div class="meta">Team GridHackers · Round 2 qualifier</div><div class="tags"><span class="tag">LightGBM</span><span class="tag">YOLOv8</span><span class="tag">EasyOCR</span><span class="tag">Streamlit</span></div></div><div><p>Phase 1: a LightGBM model predicts traffic demand from geohash, time, road type and weather (about 91 on the leaderboard). Phase 2: YOLOv8 and EasyOCR detect violations and read plates, shown on a real-time Streamlit dashboard.</p><p><a class="link" href="https://github.com/urmila152/gridlock-hackathon" target="_blank" rel="noopener">View on GitHub<span class="sr"> (opens in a new tab)</span></a></p></div></article>
+    <article class="box" data-k="project" data-det="project 0.88" data-fact="Faults are flagged when readings cross set thresholds." data-r="sw ds iot"><h3>SolarSense AI</h3><div class="meta">Team course project · I designed the database</div><div class="tags"><span class="tag">Node.js</span><span class="tag">MongoDB</span><span class="tag">Chart.js</span></div><p>A full-stack solar plant monitoring platform with 16 features, including energy prediction using statistical regression and threshold-based fault detection. I designed its MongoDB data layer.</p></article>
+    <article class="box" data-k="project" data-det="project 0.93" data-fact="Each agent saves its result to shared state so the next agent can use it." data-r="sw ds"><h3>Study Buddy Agent</h3><div class="meta">Multi-agent AI system</div><div class="tags"><span class="tag">Python</span><span class="tag">Google ADK</span></div><p>Four agents chained in a SequentialAgent pipeline with Google ADK, sharing state through the output_key pattern. Includes input validation, structured logging and secure API-key handling.</p><p><a class="link" href="https://github.com/urmila152/study-buddy-agent" target="_blank" rel="noopener">View on GitHub<span class="sr"> (opens in a new tab)</span></a></p></article>
+    <article class="box" data-k="project" data-det="project 0.86" data-fact="I built the backend logic and the data layer." data-r="sw ds"><h3>FinTrack</h3><div class="meta">Personal finance tracker</div><div class="tags"><span class="tag">SQL</span></div><p>A SQL-backed tracker for income, expenses and budgets, with charts of spending patterns.</p><p><a class="link" href="https://github.com/urmila152/fintrack" target="_blank" rel="noopener">View on GitHub<span class="sr"> (opens in a new tab)</span></a></p></article>
+    <article class="box" data-k="project" data-det="project 0.84" data-fact="I also documented its impact on urban energy use and pollution." data-r="iot"><h3>Automatic Street Lighting</h3><div class="meta">IoT mini project</div><div class="tags"><span class="tag">Arduino UNO</span><span class="tag">LDR</span><span class="tag">PIR</span></div><p>An Arduino UNO system with LDR and PIR sensors that saves energy by controlling street lights automatically.</p></article>
+    <article class="box" data-k="project" data-det="project 0.87" data-fact="My first Android app." data-r="sw"><h3>BMI Tracker</h3><div class="meta">Android app</div><div class="tags"><span class="tag">Kotlin</span><span class="tag">Firebase</span></div><p>A Kotlin app that calculates BMI and keeps your history in Firebase Realtime Database.</p></article>
+  </div>
+  <h3 class="sub">Achievements</h3>
+  <div class="grid" id="winList"><article class="box" data-k="win" data-det="win 0.96" data-fact="One of my 2026 community milestones." data-r="sw ds"><h3>Microsoft Student Ambassador 2026</h3><p>Recognised by the Microsoft Student Ambassadors community.</p></article><article class="box" data-k="win" data-det="win 0.95" data-fact="Earned at a national technical fest." data-r="sw ds"><h3>Certificate of Excellence, Codefest’26</h3><p>Eureka Event at IIT (BHU) Varanasi, awarded by its Dept. of CSE.</p></article><article class="box" data-k="win" data-det="win 0.92" data-fact="Four weeks of Python, LLM-assisted reporting and a capstone project." data-r="ds"><h3>Data Analytics Intern, Edunet Foundation</h3><p>AICTE · VOIS for Tech · Vodafone Idea, Aug–Sep 2026</p></article><article class="box" data-k="win" data-det="win 0.90" data-fact="Covered Agentic AI, Flows and Automated Test Framework essentials." data-r="sw"><h3>ServiceNow Virtual Internship</h3><p>AICTE · SmartBridge, 2026</p></article><article class="box" data-k="win" data-det="win 0.94" data-fact="Pairs with my Arduino street lighting prototype." data-r="iot"><h3>Internet of Things (IoT) certification</h3><p>German Academy of Digital Business, completed Oct 2026.</p></article><article class="box" data-k="win" data-det="win 0.91" data-fact="19 hours of structured ML practice in Python." data-r="ds"><h3>Machine Learning Using Python</h3><p>Udemy, 19 hours, completed Sep 2026.</p></article></div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email me at <strong>polurmila422@gmail.com</strong>, or find me online.</p>
+  <div class="cbtns">
+    <a class="cbtn primary" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=polurmila422@gmail.com&amp;su=Hello%20Urmila" target="_blank" rel="noopener">Write in Gmail</a>
+    <a class="cbtn" href="mailto:polurmila422@gmail.com">Open mail app</a>
+    <button type="button" class="cbtn js-only" id="copyMail">Copy email address</button>
+    <a class="cbtn" href="https://github.com/urmila152" target="_blank" rel="noopener">GitHub</a>
+    <a class="cbtn" href="https://www.linkedin.com/in/urmila-pol-6a2426280" target="_blank" rel="noopener">LinkedIn</a>
+    <span id="copyMsg" role="status" aria-live="polite"></span>
+  </div>
+</section>
+</main>
+<footer><p>Confidence scores are just for fun. Built for the AWS Student Builder Challenge and hosted on AWS Amplify.</p></footer>
+
+<div id="log" role="region" aria-label="Detection results" hidden>
+  <div class="l-top">
+    <div id="msg" role="status" aria-live="polite"></div>
+    <div class="l-actions"><button type="button" class="lbtn" id="nextBtn">Inspect next box</button><button type="button" class="lbtn ghost" id="stopBtn" aria-keyshortcuts="Escape">Stop</button></div>
+  </div>
+  <div id="prog"></div>
+  <ul class="legend" aria-label="Box classes"><li data-k="me">person</li><li data-k="skill">skill</li><li data-k="project">project</li><li data-k="win">win</li></ul>
+</div>
+
+<script>
+(function(){
+var role="all",ROLE={sw:"software engineer",ds:"data scientist",iot:"IoT builder"},NEED=8,seen={},nSeen=0,unlocked=false,on=false,trigger=null;
+var $=function(id){return document.getElementById(id)},msg=$("msg"),prog=$("prog"),log=$("log"),nav=$("nav"),body=document.body;
+var btns=document.querySelectorAll(".scanBtn"),els=document.querySelectorAll("[data-det]"),roleBtns=document.querySelectorAll(".role");
+function reduced(){return window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches}
+function keyOf(e){return e.dataset.det+e.dataset.fact}
+function fit(){
+ var r=document.documentElement.style;
+ r.setProperty("--navh",nav.offsetHeight+"px");
+ if(on){r.setProperty("--logh",log.offsetHeight+"px");body.style.paddingBottom=(log.offsetHeight+24)+"px"}else body.style.paddingBottom=""
+}
+function clearSel(){document.querySelectorAll(".sel").forEach(function(e){e.classList.remove("sel")})}
+function setScan(v){
+ on=v;body.classList.toggle("scan",v);clearSel();
+ btns.forEach(function(b){b.setAttribute("aria-pressed",v);b.textContent=v?"Stop detection":"Run detection";b.classList.remove("pulse")});
+ els.forEach(function(e){if(v)e.tabIndex=0;else e.removeAttribute("tabindex")});
+ log.hidden=!v;
+ if(v){showProg();applyRole()}
+ fit()
+}
+function applyRole(){
+ var m=0;
+ body.classList.toggle("filtered",role!=="all");
+ els.forEach(function(e){var d=role!=="all"&&e.dataset.r&&e.dataset.r.split(" ").indexOf(role)<0;e.classList.toggle("dim",!!d);if(!d)m++});
+ if(on)msg.textContent=role==="all"?"Detection running: "+els.length+" objects found. Tap a box, or press Inspect next box, to see the story behind it. Esc stops detection.":"Detecting as "+ROLE[role]+": "+m+" of "+els.length+" objects match. Dashed boxes are less relevant for this role.";
+ fit()
+}
+function showProg(){
+ if(unlocked){prog.className="rare";prog.innerHTML="<strong>Rare class unlocked: learner who ships.</strong> Evidence: Python since 2023, then YOLOv8, LightGBM and Google ADK projects, a solar monitoring platform, an IoT certification in Oct 2026 and now this site on AWS. Seen at GridLock, Codefest’26 and AgentX24. One builder, three lenses: software, data and IoT."}
+ else{var p="";for(var i=0;i<NEED;i++)p+="<i"+(i<nSeen?" class=\"on\"":"")+"></i>";prog.className="";prog.innerHTML="Inspected "+nSeen+" of "+NEED+" boxes to unlock a rare class<span class=\"pips\" aria-hidden=\"true\">"+p+"</span>"}
+ fit()
+}
+function pick(t){
+ clearSel();t.classList.add("sel");
+ var k=keyOf(t),fresh=false;
+ if(!seen[k]){seen[k]=1;nSeen++}
+ if(!unlocked&&nSeen>=NEED){unlocked=true;fresh=true;body.classList.add("unlocked")}
+ msg.textContent=(fresh?"Rare class unlocked. Scroll to the top to see it on my headline. ":"")+t.dataset.det+": "+t.dataset.fact;
+ showProg()
+}
+function next(){
+ for(var i=0;i<els.length;i++){var e=els[i];if(!e.classList.contains("dim")&&!seen[keyOf(e)]){e.focus({preventScroll:true});e.scrollIntoView({block:"nearest",behavior:reduced()?"auto":"smooth"});pick(e);return}}
+ msg.textContent="You have inspected every matching box. Pick another role to find more.";fit()
+}
+function stop(refocus){
+ var had=document.activeElement&&(document.activeElement.hasAttribute("data-det")||log.contains(document.activeElement));
+ setScan(false);
+ if(refocus||had)(trigger||$("heroScan")).focus()
+}
+roleBtns.forEach(function(b){b.onclick=function(){
+ role=b.dataset.role;trigger=b;
+ roleBtns.forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+ if(!on)setScan(true);else applyRole()
+}});
+btns.forEach(function(b){b.onclick=function(){trigger=b;setScan(!on)}});
+$("nextBtn").onclick=next;
+$("stopBtn").onclick=function(){stop(true)};
+document.addEventListener("click",function(e){if(!on)return;var t=e.target.closest("[data-det]");if(t)pick(t)});
+document.addEventListener("keydown",function(e){
+ if(e.key==="Escape"&&on){stop(false);return}
+ if(on&&(e.key==="Enter"||e.key===" ")&&e.target.hasAttribute("data-det")){pick(e.target);e.preventDefault()}
+});
+window.addEventListener("resize",fit);
+if(window.ResizeObserver)new ResizeObserver(fit).observe(log);
+fit();
+if("IntersectionObserver" in window){
+ var links=document.querySelectorAll("nav a[href^='#']");
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(l){if(l.getAttribute("href")==="#"+e.target.id)l.setAttribute("aria-current","true");else l.removeAttribute("aria-current")})}})},{rootMargin:"-45% 0px -50% 0px"});
+ ["about","skills","projects","contact"].forEach(function(id){io.observe($(id))})
+}
+$("copyMail").onclick=function(){
+ var t="polurmila422@gmail.com",m=$("copyMsg");
+ function ok(){m.textContent="Email address copied.";setTimeout(function(){m.textContent=""},4000)}
+ function old(){var i=document.createElement("input");i.value=t;document.body.appendChild(i);i.select();try{document.execCommand("copy");ok()}catch(e){m.textContent="Copy failed. Please select the address above."}document.body.removeChild(i)}
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,old);else old()
+};
+})();
+</script>
+</body>
+</html>
